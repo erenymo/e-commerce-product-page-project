@@ -6,5 +6,5 @@
 
 This is a beautiful E-Commerce Product Page Component.
 
--Live Site URL:
--Solution URL:
+- Live Site URL:
+- Solution URL:
