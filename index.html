@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce product page</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./output/tailwind.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Script-->
+    <script defer src="script.js"></script>
+  </head>
+  <body class="font-primary min-h-screen overflow-x-hidden">
+    <!--Navbar-->
+    <div
+      class="xl:max-w-128 lg:max-w-4xl md:max-w-3xl md:py-12 py-4 mx-auto border-b flex items-center justify-between"
+    >
+      <!--Navbar Logo-->
+      <div class="flex md:gap-12 gap-4 items-center">
+        <!--Mobile Menu-->
+        <button class="btn__menu md:hidden ml-8">
+          <img src="./images/icon-menu.svg" alt="menu icon" />
+        </button>
+
+        <div
+          class="nav__mobile absolute w-3/5 h-full top-0 left-0 bg-white hidden z-20 py-8 px-8 flex flex-col gap-8"
+        >
+          <button class="btn__menu--close">
+            <img src="./images/icon-close.svg" alt="" />
+          </button>
+
+          <nav>
+            <ul class="gap-4 font-bold text-lg text-veryDarkBlue flex flex-col">
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                  >Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                  >Men</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                  >Women</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div
+          class="overlay__nav w-screen h-full top-0 left-0 absolute bg-black bg-opacity-75 z-10 hidden"
+        ></div>
+        <!--Mobile Menu-->
+        <a href="#"><img src="./images/logo.svg" alt="Sneakers logo" /></a>
+        <nav>
+          <ul class="gap-8 text-darkGrayishBlue hidden md:flex">
+            <li>
+              <a
+                href="#"
+                class="py-14 hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                >Collections</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="py-14 hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                >Men</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="py-14 hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                >Women</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="py-14 hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="py-14 hover:border-b-4 hover:text-veryDarkBlue border-orange duration-75"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!--User, Cart-->
+      <div class="flex md:gap-12 gap-4 md:pr-0 pr-4 relative items-center">
+        <!--Cart-->
+        <button class="icon__cart relative">
+          <ion-icon
+            class="text-3xl text-darkGrayishBlue hover:text-veryDarkBlue font-bold"
+            name="cart-outline"
+          ></ion-icon>
+          <p
+            class="item__amount item__amount--cart absolute -top-1 -right-1 text-xs text-white bg-orange px-1.5 rounded-lg"
+          >
+            3
+          </p>
+        </button>
+
+        <button>
+          <img
+            src="./images/image-avatar.png"
+            class="md:w-12 w-8 rounded-full hover:outline hover:outline-orange"
+            alt="user avatar"
+          />
+        </button>
+
+        <!--Cart Menu-->
+        <div
+          class="menu__cart absolute md:top-14 top-20 md:-right-14 right-2 md:w-96 h-56 w-86 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] rounded-xl bg-white flex flex-col transform ease-in duration-200 hidden z-30"
+        >
+          <div class="border-b p-5">
+            <h4 class="font-bold">Cart</h4>
+          </div>
+          <div class="cart--details p-4 hidden">
+            <div class="flex items-center justify-between">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                class="w-14 rounded-md"
+                alt="product-1 thumbnail"
+              />
+              <div>
+                <p class="text-grayishBlue">Fall Limited Edition Sneakers</p>
+                <p class="text-grayishBlue">
+                  <em class="item__price not-italic">$125</em> x
+                  <em class="item__amount not-italic">3</em>
+                  <em class="total__price font-bold not-italic text-black">
+                    $375.00</em
+                  >
+                </p>
+              </div>
+
+              <button>
+                <img
+                  src="./images/icon-delete.svg"
+                  class="icon__cart--delete"
+                  alt="delete icon"
+                />
+              </button>
+            </div>
+
+            <button
+              class="w-full mt-6 py-3 rounded-lg bg-orange text-white font-bold tracking-widest hover:bg-opacity-60 active:translate-y-0.5 duration-75"
+            >
+              Checkout
+            </button>
+          </div>
+
+          <div class="cart--empty h-40 flex justify-center items-center">
+            <p class="font-bold text-darkGrayishBlue">Your cart is empty.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay absolute top-0 left-0 w-full h-full z-20 hidden"></div>
+
+    <!--Product Page-->
+    <div
+      class="xl:max-w-128 lg:max-w-4xl md:gap-20 gap-4 md:max-w-3xl md:mx-auto md:mt-16 flex md:flex-row flex-col overflow-hidden md:px-12 pr-0"
+    >
+      <!--Left Side-->
+      <div class="md:w-1/2 w-full overflow-hidden relative">
+        <div class="absolute w-full h-5/6 z-10 md:hidden"></div>
+        <!--Main Photo-->
+        <div
+          class="slider hover:cursor-pointer hover:opacity-80 duration-200 flex overflow-hidden"
+        >
+          <img
+            src="./images/image-product-1.jpg"
+            class="slide slide--1 w-full md:rounded-2xl"
+            alt="product-1 image"
+          />
+
+          <img
+            src="./images/image-product-2.jpg"
+            class="slide slide--2 w-full md:rounded-2xl"
+            alt="product-2 image"
+          />
+
+          <img
+            src="./images/image-product-3.jpg"
+            class="slide slide--3 w-full md:rounded-2xl"
+            alt="product-3 image"
+          />
+
+          <img
+            src="./images/image-product-4.jpg"
+            class="slide slide--4 w-full md:rounded-2xl"
+            alt="product-4 image"
+          />
+        </div>
+
+        <!--Thumbnails-->
+        <div
+          class="thumbnails md:px-0 px-4 grid grid-cols-4 mt-8 justify-between gap-8"
+        ></div>
+      </div>
+
+      <!--Right Side-->
+      <div
+        class="md:w-1/2 w-full md:p-12 md:pr-0 px-4 md:px-0 flex flex-col justify-center"
+      >
+        <h1 class="tracking-widest text-sm font-bold text-orange">
+          SNEAKER COMPANY
+        </h1>
+        <h2 class="text-4xl font-bold mt-5">Fall Limited Edition Sneakers</h2>
+
+        <p class="text-darkGrayishBlue mt-7">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+
+        <div class="mt-6 flex items-center gap-4">
+          <h3 class="font-bold text-3xl">$125.00</h3>
+          <h4 class="text-orange font-bold bg-paleOrange px-1.5 rounded">
+            50%
+          </h4>
+        </div>
+
+        <h4 class="text-grayishBlue font-bold line-through mt-1">$250.00</h4>
+
+        <div class="flex mt-6 md:gap-6 gap-2 flex-col md:flex-row">
+          <!--counter-->
+          <div
+            class="bg-lightGrayishBlue flex md:w-2/5 w-full justify-between items-center py-3 px-4 rounded-xl"
+          >
+            <button class="">
+              <img
+                src="./images/icon-minus.svg"
+                class="btn__minus active:translate-y-0.5 duration-75 hover:opacity-60"
+                alt="minus icon"
+              />
+            </button>
+            <p class="item__amount--counter item__amount text-lg font-bold">
+              0
+            </p>
+            <button class="">
+              <img
+                src="./images/icon-plus.svg"
+                class="btn__plus active:translate-y-0.5 duration-75 hover:opacity-60"
+                alt="plus icon"
+              />
+            </button>
+          </div>
+
+          <!--add to cart-->
+          <button
+            class="btn__addToCart flex gap-4 items-center justify-center md:w-3/5 w-full py-3 md:py-0 text-paleOrange bg-orange rounded-xl font-bold active:translate-y-0.5 duration-75 hover:bg-opacity-60 shadow-[0px_15px_48px_6px_#FFE2CC] md:mb-0 mb-8"
+          >
+            <ion-icon class="text-xl font-bold" name="cart-outline"></ion-icon>
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="lightbox absolute w-108 h-110 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 rounded-2xl overflow-hidden bg-orange hidden"
+    >
+      <img
+        src="./images/image-product-1.jpg"
+        class="slideLightbox slide--1 w-full rounded-2xl"
+        alt="product-1 image"
+      />
+
+      <img
+        src="./images/image-product-2.jpg"
+        class="slideLightbox slide--2 w-full rounded-2xl"
+        alt="product-2 image"
+      />
+
+      <img
+        src="./images/image-product-3.jpg"
+        class="slideLightbox slide--3 w-full rounded-2xl"
+        alt="product-3 image"
+      />
+
+      <img
+        src="./images/image-product-4.jpg"
+        class="slideLightbox slide--4 w-full rounded-2xl"
+        alt="product-4 image"
+      />
+
+      <div class="w-full absolute top-1/2 flex justify-between">
+        <button class="btn__previous hover:bg-black hover:bg-opacity-20 p-4">
+          <img src="./images/icon-previous.svg" alt="" />
+        </button>
+        <button class="btn__next hover:bg-black hover:bg-opacity-20 p-4">
+          <img src="./images/icon-next.svg" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="overlay__lightbox absolute top-0 bg-black bg-opacity-75 left-0 w-full h-full z-10 hidden"
+    ></div>
+    <!--ION ICONS-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
