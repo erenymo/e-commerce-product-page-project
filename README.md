@@ -6,5 +6,5 @@
 
 This is a beautiful E-Commerce Product Page Component.
 
-- Live Site URL:
-- Solution URL:
+- Solution URL : [Click Here !]()
+- Live Site URL: [Click Here !](https://erenymo.github.io/e-commerce-product-page-project/)
